@@ -1,0 +1,31 @@
+<CustButton@Button>:
+    font_size: 32
+    color: 0, 0, 0, 1
+    size: 150, 50
+    background_normal: ''
+    background_color: .88, .88, .88, 1
+    size_hint: .25, .20
+
+<FloatLayout>
+    id: buttonLayout
+
+    CustButton:
+        text: "Blue Light"
+        pos_hint: {"x": .05, "center_y": 0.5}
+        on_press: buttonLayout.switch_light(1)
+
+    CustButton:
+        text: "Yellow Light"
+        pos_hint: {"center_x": 0.5, "center_y": 0.5}
+        on_press: buttonLayout.switch_light(2)
+
+    CustButton:
+        text: "Red Light"
+        pos_hint: {"right": .95, "center_y": 0.5}
+        on_press: buttonLayout.switch_light(3)
+
+    CustButton:
+        text: "Turn Off"
+        pos_hint: {"center_x": 0.5, "y": 0.1}
+        on_press: buttonLayout.stop_lights()
+
